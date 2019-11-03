@@ -1,0 +1,65 @@
+@media screen and (max-width: 600px) {
+    .floating-text-message {
+        line-height:1;
+        text-decoration: underline;
+        font-size:0.6rem;        
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .floating-text-number {
+        font-size:1rem;
+        font-weight: bold;
+        line-height:1;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .floating-button {
+        font-size:1rem;
+        color: #FFF;
+        border-radius: 100%;
+        background-color: #009be1;
+        width: 60px;
+        height: 60px;
+        border: none;
+        outline: none;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        transition: .3s;
+        text-decoration: none;
+        display: flex;
+    }
+  }
+
+.profile-category {
+    flex: 1 0 100px;
+    display:table;
+    justify-content:center;
+    align-content:center;
+    max-width:300px;
+    border-radius: 15px 0px 15px 15px; 
+    border:2px solid #dbdbdb;
+    padding:7px;
+}
+
+.profile-category-description {
+    font-size:1.8rem;
+    padding-left:10px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.profile-category .is-active {
+    background-color:#009b91;
+}
+
+.tabs-icon {
+    padding-right:10px;
+}
+
+.event-link {
+    font-weight:400;
+}
+
+.event-link:hover {
+    text-decoration:underline;
+}

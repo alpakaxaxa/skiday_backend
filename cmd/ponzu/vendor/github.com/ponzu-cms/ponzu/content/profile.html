@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bühler Skiday 2020</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="event.css">
+    <link rel="stylesheet" href="bulma.css">
+    <script src="burgerMenu.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="mobile-background">
+            <div>
+                <a href="index.html" class="neutral-link mobile-link">HOME</a>
+            </div>
+            <div>
+                <a href="event.html" class="neutral-link mobile-link">EVENT</a>
+            </div>
+            <div>
+                <a href="activities.html" class="neutral-link mobile-link">ACTIVITIES</a>
+            </div>
+            <div>
+                <a href="profile.html" class="neutral-link mobile-link">PROFILE</a>
+            </div>
+        </div>
+        <div class="container">
+            <nav>
+                <h1><img class="brand" src="images/logo.png" alt="Bühler Skiday 2020"></h1>
+                <ul id="menu">
+                    <li><a class="menu-link" href="index.html">Home</a></li>
+                    <li><a class="menu-link" href="event.html">Event</a></li>
+                    <li><a class="menu-link" href="activities.html">Activities</a></li>
+                    <li><a class="menu-link" href="profile.html">Profile</a></li>
+                </ul>
+                <div id="burger-menu" onclick="toggleMenu()">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <a class="icon" id="menu-close" onclick="toggleMenu()">
+                    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="mobile-profile">
+            <div class="container">
+                <div>
+                    <div class="tabs is-toggle">
+                        <ul>
+                            <li class="tab-li is-active" onclick="toggle(this, 0)">
+                                <a>
+                                    <span class="tabs-icon"><i class="fas fa-skiing"></i></span>
+                                    <h2>
+                                        <span style="font-size:1rem;">Event</span>
+                                    </h2>
+                                </a>
+                            </li>
+
+                            <li class="tab-li" onclick="toggle(this, 1)">
+                                <a>
+                                    <span class="tabs-icon"><i class="fas fa-user"></i></span>
+                                    <h2>
+                                        <span>Profile</span>
+                                    </h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="profile-container">
+                        <div class="category-container">
+                            <div class="toggle-target">
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label for="event" class="label">Skiday</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <p class="control">
+                                                <input id="event" class="input is-small" type="text"
+                                                    value="12. January 2019">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label class="label">Participate</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field is-narrow">
+                                            <div class="control">
+                                                <label class="radio">
+                                                    <input class="is-small" type="radio" name="member">
+                                                    <span class="is-small">Yes</span>
+                                                </label>
+                                                <label class="radio">
+                                                    <input class="is-small" type="radio" name="member">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label class="label">Location</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field is-narrow">
+                                            <div class="control">
+                                                <div class="select is-small is-fullwidth">
+                                                    <select>
+                                                        <option>Gossau, 09:00</option>
+                                                        <option>Marketing</option>
+                                                        <option>Sales</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label class="label">With Partner</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field is-narrow">
+                                            <div class="control">
+                                                <label class="radio">
+                                                    <input class="is-small" type="radio" name="partner">
+                                                    <span class="is-small">Yes</span>
+                                                </label>
+                                                <label class="radio">
+                                                    <input class="is-small" type="radio" name="partner">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label class="label">Competition</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field is-narrow">
+                                            <div class="control">
+                                                <div class="select is-small is-fullwidth">
+                                                    <select>
+                                                        <option>Snowboard</option>
+                                                        <option>Marketing</option>
+                                                        <option>Sales</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="toggle-target" style="display:none;">
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label for="firstname" class="label">Firstname</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <p class="control">
+                                                <input id="firstname" class="input is-small" type="text"
+                                                    value="Stephan">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label for="event" class="label">Lastname</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <p class="control">
+                                                <input id="event" class="input is-small" type="text" value="Müller">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label for="event" class="label">Email</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <p class="control">
+                                                <input id="event" class="input is-small" type="email"
+                                                    value="stephan.mueller@gmail.com" disabled>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a class="button is-small">Go Back</a>
+                    <a class="button is-small">Save</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="desktop-profile">
+            <div class="container">
+                <div>
+                    <div class="tabs is-toggle">
+                        <ul>
+                            <li class="tab-li-desk is-active">
+                                <a>
+                                    <span class="tabs-icon"><i class="fas fa-skiing"></i></span>
+                                    <h2 class="profile-heading">
+                                        Event
+                                    </h2>
+                                </a>
+                            </li>
+
+                            <li class="tab-li-desk is-active">
+                                <a>
+                                    <span class="tabs-icon"><i class="fas fa-user"></i></span>
+                                    <h2 class="profile-heading">
+                                        Profile
+                                    </h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="profile-container">
+                        <div class="category-container">
+                            <div id="event">
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label for="event" class="label">Skiday</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <p class="control">
+                                                <input id="event" class="input is-small" type="text"
+                                                    value="12. January 2019" disabled>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label for="desk-participate" class="label">Participate</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field is-narrow">
+                                            <div class="control">
+                                                <label id="desk-participate" class="radio">
+                                                    <input class="is-small" type="radio" name="member">
+                                                    <span class="is-small">Yes</span>
+                                                </label>
+                                                <label class="radio">
+                                                    <input class="is-small" type="radio" name="member">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label for="desk-location" class="label">Location</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field is-narrow">
+                                            <div class="control">
+                                                <div class="select is-small is-fullwidth">
+                                                    <select id="desk-location" class="is-fullwidth">
+                                                        <option>Gossau, 09:00</option>
+                                                        <option>Marketing</option>
+                                                        <option>Sales</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label class="label">With Partner</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field is-narrow">
+                                            <div class="control">
+                                                <label for="desk-partner" class="radio">
+                                                    <input id="desk-partner" class="is-small" type="radio" name="partner">
+                                                    <span class="is-small">Yes</span>
+                                                </label>
+                                                <label class="radio">
+                                                    <input class="is-small" type="radio" name="partner">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label for="desk-competition" class="label">Competition</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field is-narrow">
+                                            <div class="control">
+                                                <div class="select is-small is-fullwidth">
+                                                    <select id="desk-competition">
+                                                        <option>Snowboard</option>
+                                                        <option>Marketing</option>
+                                                        <option>Sales</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-container">
+                        <div class="category-container">
+                            <div id="profile">
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label for="desk-firstname" class="label">Firstname</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <p class="control">
+                                                <input id="desk-firstname" class="input is-small" type="text"
+                                                    value="Stephan">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label for="desk-event" class="label">Lastname</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <p class="control">
+                                                <input id="desk-event" class="input is-small" type="text" value="Müller">
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="field is-horizontal">
+                                    <div class="field-label is-small">
+                                        <label for="desk-email" class="label">Email</label>
+                                    </div>
+                                    <div class="field-body">
+                                        <div class="field">
+                                            <p class="control">
+                                                <input id="desk-email" class="input is-small" type="email"
+                                                    value="stephan.mueller@gmail.com" disabled>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a class="button is-small">Go Back</a>
+                    <a class="button is-small">Save</a>
+                </div>
+            </div>
+        </div>
+        </section>
+    </main>
+    <aside>
+        <section>
+            <div class="container">
+                <div class="profile-information">
+                    <div class="profile-information-box">
+                        <h3>
+                            Access Skiday Information
+                        </h3>
+                        <p class="description">We recommend you to access and print the PDF document of your Skiday
+                            information in order to access the full information online and offline.
+                            Do not forget to update your profile if there are changes to your participation (e.g.
+                            different
+                            departure location).
+                        </p>
+                    </div>
+                    <div>
+                        <a class="button is-small">Generate PDF</a>
+                    </div>
+                </div>
+
+                <div class="profile-information">
+                    <div class="profile-information-box">
+                        <h3>
+                            Need help?
+                        </h3>
+                        <p class="description">If you have any questions or special requests, do not hesitate to contact
+                            the
+                            Skiday team. Write an email to the following address and we contact you as soon as possible.
+                        </p>
+                    </div>
+                    <div>
+                        <a class="button is-small">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </aside>
+
+    <footer>
+        <section>
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-element">
+                        <div class="footer-header">Visit</div>
+                        <p>
+                            <a class="neutral-link"
+                                href="https://www.google.com/maps/place/Gupfenstrasse+5,+9240+Uzwil,+Schweiz/@47.4397272,9.1384206,17z/data=!3m1!4b1!4m5!3m4!1s0x479ae88794a520c9:0xdcfb0f95cf04218b!8m2!3d47.4397272!4d9.1406093">Bühler
+                                AG, Gupfenstrasse 5, 9240 Uzwil</a>
+                        </p>
+                    </div>
+                    <div class="footer-element">
+                        <div class="footer-header">Follow</div>
+                        <p>
+                            <a class="neutral-link" href="https://www.facebook.com/buhlergroup/">Facebook, </a>
+                            <a class="neutral-link" href="https://twitter.com/buhler_group">Twitter, </a>
+                            <a class="neutral-link" href="https://www.youtube.com/user/BuhlerGroup">Youtube</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <script>
+        function toggle(ele, n) {
+            e = document.getElementsByClassName("tab-li");
+            for (element of e) {
+                element.classList.remove("is-active");
+            };
+            ele.classList.add("is-active")
+
+            toggleTargets = document.getElementsByClassName("toggle-target");
+            for (element of toggleTargets) {
+                element.style.display = "none";
+            }
+            toggleTargets[n].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
